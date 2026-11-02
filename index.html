@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Harshit's Car Rental</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Harshit's Car Rental</h1>
+        <p>Find your car and enjoy your journey!</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#cars">Available Cars</a>
+        <a href="#booking">Book Now</a>
+        <a href="#faq">FAQ</a>
+    </nav>
+
+    <section id="home" class="welcome">
+        <h2>Welcome to Our Car Rental Website</h2>
+        <p>Choose your favourite car at affordable prices.</p>
+        <a href="#booking" class="book-link">Book Your Car</a>
+    </section>
+
+    <section id="cars">
+        <h2>Our Available Cars</h2>
+
+        <div class="car-container">
+
+            <div class="car">
+                <h3>Maruti Swift</h3>
+                <p>Seats: 5</p>
+                <p>Fuel: Petrol</p>
+                <p>Price: Rs. 1500/day</p>
+            </div>
+
+            <div class="car">
+                <h3>Hyundai Creta</h3>
+                <p>Seats: 5</p>
+                <p>Fuel: Diesel</p>
+                <p>Price: Rs. 2500/day</p>
+            </div>
+
+            <div class="car">
+                <h3>Mahindra Thar</h3>
+                <p>Seats: 4</p>
+                <p>Fuel: Petrol</p>
+                <p>Price: Rs. 3000/day</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="booking">
+        <h2>Car Booking Form</h2>
+
+        <form id="bookingForm">
+
+            <label>Customer Name:</label>
+            <input type="text" id="name"
+                   placeholder="Enter your name" required>
+
+            <label>Phone Number:</label>
+            <input type="tel" id="phone"
+                   placeholder="Enter phone number"
+                   pattern="[0-9]{10}" required>
+
+            <label>Select Car:</label>
+            <select id="car" required>
+                <option value="">Choose a car</option>
+                <option value="1500">Maruti Swift - Rs.1500/day</option>
+                <option value="2500">Hyundai Creta - Rs.2500/day</option>
+                <option value="3000">Mahindra Thar - Rs.3000/day</option>
+            </select>
+
+            <label>Rental Days:</label>
+            <input type="number" id="days"
+                   placeholder="Enter number of days"
+                   min="1" required>
+
+            <button type="button" id="calculateBtn">
+                Calculate Price
+            </button>
+
+            <p id="total"></p>
+
+            <button type="submit">Confirm Booking</button>
+
+        </form>
+
+        <div id="summary"></div>
+    </section>
+
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <button id="faqBtn">How can I book a car?</button>
+        <p id="faqAnswer" class="hidden">
+            Select your car, enter your details and click Confirm Booking.
+        </p>
+    </section>
+
+    <footer>
+        <p>Created by Harshit Mishra</p>
+        <p>Car Rental Booking Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
